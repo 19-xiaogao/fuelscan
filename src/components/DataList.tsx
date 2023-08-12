@@ -8,9 +8,6 @@ import dayjs from "dayjs"
 
 export default function DataList({ txs, blocks, type }: { txs?: Transaction[], blocks?: Block[], type: BlockType }) {
 
-    useEffect(() => {
-        console.log(blocks);
-    }, [blocks])
 
     const renderBlocks = useCallback(() => {
         if (!blocks) return

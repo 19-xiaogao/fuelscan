@@ -4,6 +4,8 @@ import {
     RiArrowDropDownLine
 } from 'react-icons/ri';
 import { BsSun, BsMoon } from "react-icons/bs"
+import Link from 'next/link';
+
 export default function Home() {
 
     return <div className="container mx-auto">
@@ -17,7 +19,7 @@ export default function Home() {
                         </span>
                         <RiArrowDropDownLine className="ml-2 text-2xl hover:text-steel-blue" />
                     </div>
-                    <ul className="absolute group-hover:block w-224 bg-white translate-y-1 p-10 shadow-lg shadow-cyan-500/50 rounded-md border border-gray hidden">
+                    <ul className="absolute group-hover:block w-224 bg-white translate-y-1 p-10 shadow-lg shadow-cyan-500/50 rounded-md border border-gray hidden z-10">
                         <li className="text-sm p-4 pl-10 mb-5 cursor-pointer hover:bg-light-gray rounded-md h-full text-black">
                             Transactions
                         </li>
@@ -36,16 +38,13 @@ export default function Home() {
                         </span>
                         <RiArrowDropDownLine className="ml-2 text-2xl hover:text-steel-blue" />
                     </div>
-                    <ul className="absolute group-hover:block w-224 bg-white translate-y-1 p-10 shadow-lg shadow-cyan-500/50 rounded-md border border-gray hidden">
+                    <ul className="absolute group-hover:block w-224 bg-white translate-y-1 p-10 shadow-lg shadow-cyan-500/50 rounded-md border border-gray hidden z-10">
                         <li className="text-sm p-4 pl-10 mb-5 cursor-pointer hover:bg-light-gray rounded-md h-full text-black">
-                            Transactions
+                            <a href="https://bscscan.com/unitconverter" target="_blank" rel="noopener noreferrer">
+                                unit Converter
+                            </a>
                         </li>
-                        <li className="text-sm p-4 pl-10 cursor-pointer hover:bg-light-gray rounded-md h-full text-black">
-                            Pending Transactions
-                        </li>
-                        <li className="text-sm p-4 pl-10 mb-5  cursor-pointer hover:bg-light-gray rounded-md h-full text-black">
-                            Blocks
-                        </li>
+
                     </ul>
                 </li>
                 <li className="cursor-pointer hover:text-steel-blue flex items-center">

@@ -19,18 +19,28 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                     <div className="flex flex-col items-center">
-                        <h2 className="text-xl text-gray">Committed Blocks</h2>
-                        <h4 className="text-xl">10 752 264</h4>
-                    </div>
-                    <div className="h-30 w-1 bg-light-gray ml-20 mr-20"></div>
-                    <div className="flex flex-col items-center">
-                        <h2 className="text-xl text-gray">Verified Blocks</h2>
+                        <h2 className="text-xl text-gray"> Blocks</h2>
                         <h4 className="text-xl">10 752 264</h4>
                     </div>
                     <div className="h-30 w-1 bg-light-gray ml-20 mr-20"></div>
                     <div className="flex flex-col items-center">
                         <h2 className="text-xl text-gray">Transactions</h2>
                         <h4 className="text-xl">10 752 264</h4>
+                    </div>
+                    <div className="h-30 w-1 bg-light-gray ml-20 mr-20"></div>
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-xl text-gray">Addresses</h2>
+                        <h4 className="text-xl">10 752 264</h4>
+                    </div>
+                    <div className="h-30 w-1 bg-light-gray ml-20 mr-20"></div>
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-xl text-gray">TPS</h2>
+                        <h4 className="text-xl">20/sec</h4>
+                    </div>
+                    <div className="h-30 w-1 bg-light-gray ml-20 mr-20"></div>
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-xl text-gray">Gas Price</h2>
+                        <h4 className="text-xl">1 GWEI</h4>
                     </div>
 
                 </div>
