@@ -60,7 +60,9 @@ export default function DataList({ txs, blocks, type }: { txs?: Transaction[], b
                 <div className="w-1/3 text-center">
                     <p className="flex">
                         <span className="mr-5">Hash</span>
-                        <span className="text-dark-blue block cursor-pointer truncate flex-1">{v.id}</span>
+                        <Link href={`/tx/${v.id}`} className="text-dark-blue block cursor-pointer truncate flex-1">
+                            <span>{v.id}</span>
+                        </Link>
                     </p>
                     <p className="flex">
                         <span className="mr-5">Sender</span>

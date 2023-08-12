@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
     RiArrowDropDownLine
 } from 'react-icons/ri';
@@ -10,7 +11,9 @@ export default function Home() {
 
     return <div className="bg-white border-b border-off-white shadow-lg p-4">
         <header className="h-60 w-full flex items-center justify-between  container mx-auto">
-            <Image src="/images/next.svg" width="120" height={60} alt="" />
+            <Link href="/">
+                <Image src="/images/next.svg" width="120" height={60} alt="" />
+            </Link>
             <ul className="flex items-center h-full">
                 <li className="mr-30 relative hover:text-steel-blue group">
                     <div className="cursor-pointer flex items-center hover:text-steel-blue">
