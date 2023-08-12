@@ -53,3 +53,10 @@ textarea {
 
   /* 添加其他自定义样式 */
 }
+body {
+  height: auto!important;
+
+  margin: 0 auto -99px;
+  min-height: 100%;
+  background-color: #f8f9fa;
+}

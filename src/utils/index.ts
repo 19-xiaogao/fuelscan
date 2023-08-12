@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 
 export const timeDifference = (knownTime: number) => {
 
@@ -10,4 +11,8 @@ export const timeDifference = (knownTime: number) => {
     const secondsDifference = Math.floor(timeDifference / (1000 * 60));
 
     return secondsDifference + "secs go"
+}
+
+export const timeFormat = (time: number) => {
+    return dayjs(time * 1000).format("YYYY-MM-DD HH:mm:ss")
 }

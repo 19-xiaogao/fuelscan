@@ -4,12 +4,12 @@ import {
     RiArrowDropDownLine
 } from 'react-icons/ri';
 import { BsSun, BsMoon } from "react-icons/bs"
-import Link from 'next/link';
+
 
 export default function Home() {
 
-    return <div className="container mx-auto">
-        <header className="h-60 w-full flex items-center justify-between">
+    return <div className="bg-white border-b border-off-white shadow-lg p-4">
+        <header className="h-60 w-full flex items-center justify-between  container mx-auto">
             <Image src="/images/next.svg" width="120" height={60} alt="" />
             <ul className="flex items-center h-full">
                 <li className="mr-30 relative hover:text-steel-blue group">

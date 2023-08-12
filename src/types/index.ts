@@ -44,3 +44,7 @@ export interface Transaction {
     reason: any,
 }
 
+export interface BlockDetail extends Block {
+    transactions: Transaction[]
+}
+

@@ -4,9 +4,15 @@ import { GiStoneBlock } from "react-icons/gi"
 import { HiViewList } from "react-icons/hi"
 import { AiOutlineArrowRight } from "react-icons/ai"
 import { Block, BlockType, Transaction } from "@/types"
-import dayjs from "dayjs"
+import Link from "next/link";
+import { timeFormat } from "@/utils"
 
 export default function DataList({ txs, blocks, type }: { txs?: Transaction[], blocks?: Block[], type: BlockType }) {
+
+    useEffect(() => {
+        console.log("blocks:---------", blocks);
+        console.log("txs:---------", txs);
+    })
 
 
     const renderBlocks = useCallback(() => {
@@ -17,13 +23,16 @@ export default function DataList({ txs, blocks, type }: { txs?: Transaction[], b
                     <GiStoneBlock className="text-3xl" />
                     <div className="ml-10">
                         <p className="cursor-pointer text-dark-blue text-lg">{v.height}</p>
-                        <p className="text-sm text-gray">{dayjs(v.timestamp * 1000).format("YYYY-MM-DD HH:mm:ss")} </p>
+                        <p className="text-sm text-gray">{timeFormat(v.timestamp)} </p>
                     </div>
                 </div>
                 <div className="w-1/3 text-center">
                     <p className="flex">
                         <span className="mr-5">block Hash</span>
-                        <span className="text-dark-blue block cursor-pointer truncate flex-1">{v.transactions_root}</span>
+                        <Link href={`/block/${v.id}`} className="text-dark-blue block cursor-pointer truncate flex-1">
+                            <span>{v.id}</span>
+                        </Link>
+
                     </p>
                     <p className="text-sm text-gray text-left">
                         <span className="text-dark-blue cursor-pointer">{v.count} txns </span>
@@ -45,7 +54,7 @@ export default function DataList({ txs, blocks, type }: { txs?: Transaction[], b
                     <HiViewList className="text-3xl" />
                     <div className="ml-10">
                         <p className="cursor-pointer text-dark-blue text-lg">{v.height}</p>
-                        <p className="text-sm text-gray">{dayjs(v.timestamp * 1000).format("YYYY-MM-DD HH:mm:ss")} </p>
+                        <p className="text-sm text-gray">{timeFormat(v.timestamp)} </p>
                     </div>
                 </div>
                 <div className="w-1/3 text-center">
